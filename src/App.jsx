@@ -1,14 +1,24 @@
 import './App.css'
 import Sqaure from './Sqaure'
 import Input from './Input'
+import { useState } from 'react'
 
 function App() {
-  
+  const [colorValue ,setColorValue] = useState('')
+  const [hexValue, setHexValue] = useState('')
   return (
-    <>
-     <Sqaure />
-     <Input/>
-    </>
+    <div className='App'>
+     <Sqaure 
+     colorValue={colorValue}
+     hexValue={hexValue}
+      
+     />
+     <Input 
+     colorValue={colorValue}
+     setColorValue={setColorValue}
+     setHexValue={setHexValue}
+     />
+    </div>
   )
 }
 
